@@ -111,8 +111,9 @@
         generateFood(); // Nuovo cibo
     }
 
-    // Funzione per cambiare direzione (W, A, S, D)
+    // Funzione per cambiare direzione (con W, A, S, D)
     function changeDirection(event) {
+        // Preveniamo il cambiamento della direzione in modo che il serpente non possa andare in direzione opposta a quella attuale
         if (event.key === "a" && direction !== "RIGHT") direction = "LEFT";
         if (event.key === "w" && direction !== "DOWN") direction = "UP";
         if (event.key === "d" && direction !== "LEFT") direction = "RIGHT";
